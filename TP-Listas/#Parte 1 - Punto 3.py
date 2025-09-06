@@ -1,4 +1,4 @@
-#Parte 1 - Punto 1
+#Parte 1 - Punto 3
 lista = []
 salida = False
 
