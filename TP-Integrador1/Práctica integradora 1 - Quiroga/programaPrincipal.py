@@ -1,10 +1,10 @@
 #Programa principal
 
-#importo las funciones des}de el archivo principal
-from practicaIntegradora1 import pedirGolosinas 
-from practicaIntegradora1 import mostrarLista
-from practicaIntegradora1 import rellenarGolosinas
-from practicaIntegradora1 import apagarMaquina
+#importo las funciones desde el archivo principal
+from funcionPedir import pedirGolosinas 
+from funcionMostrar import mostrarLista
+from funcionRellenar import rellenarGolosinas
+from funcionApagar import apagarMaquina
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ golosinas = [
 empleados = {
     1100: "José Alonso",
     1200: "Federico Pacheco",
-    1300: "}Nelson Pereira",
+    1300: "Nelson Pereira",
     1400: "Osvaldo Tejada",
     1500: "Gastón Garcia"
 }

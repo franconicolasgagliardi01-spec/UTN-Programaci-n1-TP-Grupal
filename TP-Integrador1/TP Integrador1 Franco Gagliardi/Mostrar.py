@@ -1,10 +1,13 @@
 def Mostrar_Golosinas(golosinas, golosinasPedidas, opcion):
     print("------------------------------")
     print("[Codigo, Nombre, Cantidad]")
-    for i in range(0,len(golosinas)): #Muestro todas las golosinas fila por fila
-        print(golosinas[i])
+    if opcion == "b":
+        for i in range(0,len(golosinas)): #Muestro todas las golosinas fila por fila
+            print(golosinas[i])
 
     if opcion == "d": #En caso de que se apague
+        for i in range(0,len(golosinasPedidas)): #Muestro todas las golosinas fila por fila
+            print(golosinasPedidas[i])
         largoGolosinasPedidas = len(golosinasPedidas) #Guardo la cantidad de filas de golosinasPedidas
         totalPedido = 0 #Donde hare la sumatoria
 
