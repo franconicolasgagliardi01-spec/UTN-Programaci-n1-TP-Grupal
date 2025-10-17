@@ -1,0 +1,3 @@
+53365;Juan Pérez;8
+55654;María López;10
+58999;Pablo Gómez;6
