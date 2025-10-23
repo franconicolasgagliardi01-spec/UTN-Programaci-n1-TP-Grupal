@@ -10,12 +10,12 @@ def guardarAprobados(alumnos):
 
     legajosAprobados = list(aprobados)
 
-    with open(ruta, "w") as archivo: #Creo archivo de aprobados
+    with open(ruta, "w", encoding="utf-8") as archivo: #Creo archivo de aprobados
         for i in range(len(legajosAprobados)):
             aux = aprobados[legajosAprobados[i]]
             archivo.write(f"{legajosAprobados[i]};{aux[0]};{aux[1]}\n")
 
-    with open(ruta, "r") as archivoAprobados: #Leo archivo de aprobados
+    with open(ruta, "r", encoding="utf-8") as archivoAprobados: #Leo archivo de aprobados
         print("Alumnos aprobados: ")
         for linea in archivoAprobados:
             linea = linea.strip()

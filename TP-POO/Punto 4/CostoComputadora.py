@@ -33,9 +33,12 @@ class CostoComputadora:
           modeloPC = input("Ingrese el modelo de la computadora -> ")
 
           cantidadcomponentes = int(input("Porfavor ingrese cuantos componentes desea agregar a la PC: "))
+          while cantidadcomponentes < 1:
+              cantidadcomponentes = int(input("Porfavor ingrese una cantidad mayor o igual a 1: "))
+              
 
           for i in range (0,cantidadcomponentes):
-              print(f"\n-- Componente {i} --")
+              print(f"\n-- Componente {i + 1} --")
               componente = input(f"Ingresa el componente -> ")
               marca = input("Ingrese la marca -> ")
             

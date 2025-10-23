@@ -1,3 +1,4 @@
-53365;Juan Pérez;8
-55654;María López;10
-58999;Pablo Gómez;6
+53365;Juan PÃ©rez;8
+55654;MarÃ­a LÃ³pez;10
+58999;Pablo GÃ³mez;6
+51515;Carlos Palacios;7

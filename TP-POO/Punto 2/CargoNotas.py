@@ -25,6 +25,11 @@ class CargaNotas:
            
             print(f"\n-- Alumno {i} --")
             nombreCompleto = input(f"-Ingrese el nombre completo del alumno {i}: ")
+            aux = nombreCompleto.replace(" ","")
+            while not aux.isalpha():
+                nombreCompleto = input(f"-Ingrese un nombre completo valido para el alumno {i}: ")
+                aux = nombreCompleto.replace(" ","")
+                
             legajo = input("-Ingrese el legajo de este alumno: ")
 
             while legajo in legajos_usados:

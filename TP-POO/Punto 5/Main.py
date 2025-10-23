@@ -3,11 +3,17 @@ from Vivienda import Vivienda
 from Habitacion import Habitacion
 
 barrios = []
+barriosIngresados = []
 
 creacion = True
 while creacion: #Estructura principal creacion de barrios
     print("*Creacion de barrio*")
     nombre = input("Ingrese el nombre del barrio: ")
+    while nombre in barriosIngresados:
+        print("El barrio ingresado ya existe")
+        nombre = input("Ingrese el nombre del barrio: ")
+    barriosIngresados.append(nombre)
+
     empresa = input("ingrese el nombre de la empresa constructora: ")
     viviendas = []
     barrio_1 = Barrio(nombre, empresa, viviendas)
@@ -16,10 +22,26 @@ while creacion: #Estructura principal creacion de barrios
     while creacion1: #Estructura secundaria de creacion de viviendas
         print("*Creacion de vivienda*")
         calle = input("Ingrese la calle: ")  
-        numero = int(input("Ingrese el número de calle: "))  
+
+        numero = input("Ingrese el número de calle: ")
+        while not numero.isdigit():
+            print("Ingrese un numero")
+            numero = input("Ingrese el número de calle: ") 
+        numero = int(numero)
+
         manzana = input("Ingrese la manzana: ")  
-        nroCasa = int(input("Ingrese el número de casa: "))  
-        superficieTerreno = float(input("Ingrese la superficie del terreno en m²: "))  
+        nroCasa = input("Ingrese el número de casa: ")
+        while not nroCasa.isdigit():
+            print("Ingrese un numero")
+            nroCasa = input("Ingrese el número de casa: ") 
+        nroCasa = int(nroCasa)  
+
+        superficieTerreno = input("Ingrese la superficie del terreno en m²: ")
+        while not superficieTerreno.isdigit():
+            print("Ingrese un numero")
+            superficieTerreno = input("Ingrese la superficie del terreno en m²: ")
+        superficieTerreno = float(superficieTerreno)
+
         habitaciones = []
         vivienda_1 = Vivienda(calle, numero, manzana, nroCasa, superficieTerreno, habitaciones)
         barrio_1.viviendas.append(vivienda_1)
@@ -28,7 +50,13 @@ while creacion: #Estructura principal creacion de barrios
         while creacion2: #Estructura terciaria de creacion de habitaciones
             print("*Creo habitacion*")
             nombre = input("Ingrese el nombre de la habitacion: ")
-            metrosCuadrados = float(input("Ingrese los metros cuadrados de la habitacion: "))
+
+            metrosCuadrados = input("Ingrese los metros cuadrados de la habitacion: ")
+            while not metrosCuadrados.isdigit():
+                print("Ingrese un numero")
+                metrosCuadrados = input("Ingrese los metros cuadrados de la habitacion: ")
+            metrosCuadrados = float(metrosCuadrados)
+            
             habitacion_1 = Habitacion(nombre, metrosCuadrados)
             vivienda_1.habitaciones.append(habitacion_1)
 
